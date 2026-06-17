@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/Admin/Downloads/qimen-almanac_3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遁甲 · Qi Men Luck &amp; Wealth Almanac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Qi Men Luck &amp; Wealth Almanac_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --lacquer:#15110D; --lacquer2:#1E1812; --panel:#241D15; --ink:#2C241B;
+    --bone:#ECE4D3; --bone-dim:#B5AB93; --bone-faint:#7E765F;
+    --cinnabar:#C0392B; --cinnabar-deep:#7E1B12;
+    --gold:#C9A24B; --gold-soft:#DCC383; --gold-line:rgba(201,162,75,.35);
+    --jade:#7AA083; --jade-soft:#A9C6AE;
+    --display:'Cormorant Garamond',serif;
+    --cjk:'Noto Serif SC',serif;
+    --body:'Spectral',Georgia,serif;
+    --mono:'IBM Plex Mono',monospace;
+  }
+  body.th{ --body:'Noto Serif Thai','Spectral',serif; }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:radial-gradient(120% 80% at 50% -10%, #211a12 0%, var(--lacquer) 55%, #100c08 100%);
+    color:var(--bone); font-family:var(--body); line-height:1.55;
+    -webkit-font-smoothing:antialiased; min-height:100vh; padding:clamp(18px,4vw,54px);
+  }
+  .wrap{max-width:1120px;margin:0 auto}
+
+  .mast{position:relative;border:1px solid var(--gold-line);
+    padding:clamp(22px,4vw,40px) clamp(20px,4vw,46px);
+    background:linear-gradient(180deg,rgba(40,32,22,.6),rgba(20,16,11,.2));}
+  .mast::before,.mast::after{content:"";position:absolute;left:8px;right:8px;height:1px;background:var(--gold-line)}
+  .mast::before{top:8px}.mast::after{bottom:8px}
+  .langtoggle{position:absolute;top:18px;right:18px;display:flex;gap:0;border:1px solid var(--gold-line);z-index:2}
+  .langtoggle button{border:0;border-radius:0;padding:7px 13px;font-size:11px;letter-spacing:.12em;
+    background:transparent;color:var(--bone-faint)}
+  .langtoggle button.on{background:var(--cinnabar-deep);color:var(--bone)}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 14px;max-width:80%}
+  body.th .eyebrow{font-family:var(--mono);letter-spacing:.12em}
+  .titlerow{display:flex;align-items:baseline;gap:clamp(14px,3vw,30px);flex-wrap:wrap}
+  .glyph{font-family:var(--cjk);font-weight:900;color:var(--cinnabar);font-size:clamp(46px,9vw,86px);line-height:.9;text-shadow:0 1px 0 rgba(0,0,0,.6)}
+  .titletext h1{font-family:var(--display);font-weight:500;font-style:italic;font-size:clamp(28px,5vw,46px);margin:0;color:var(--bone)}
+  body.th .titletext h1{font-family:'Noto Serif Thai',serif;font-style:normal;font-weight:700;font-size:clamp(24px,4.4vw,40px)}
+  .titletext p{margin:.3em 0 0;color:var(--bone-dim);max-width:50ch;font-size:15px}
+  .base-chip{margin-top:20px;display:inline-flex;align-items:center;gap:14px;border:1px solid var(--gold-line);padding:8px 16px;background:rgba(192,57,43,.07)}
+  .base-chip .seal{font-family:var(--cjk);font-weight:900;color:var(--bone);background:var(--cinnabar-deep);width:38px;height:38px;display:grid;place-items:center;font-size:20px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(220,195,131,.4)}
+  .base-chip .meta{font-family:var(--mono);font-size:11.5px;color:var(--bone-dim);line-height:1.55}
+  body.th .base-chip .meta{font-family:var(--body);font-size:12.5px}
+  .base-chip .meta b{color:var(--gold-soft);font-weight:600}
+
+  .nowbox{margin-top:24px;border:1px solid var(--gold-line);padding:18px 22px;position:relative;background:linear-gradient(180deg,rgba(40,32,22,.5),rgba(20,16,11,.2));transition:.25s}
+  .nowbox.good{border-color:rgba(201,162,75,.6);box-shadow:inset 0 0 40px rgba(201,162,75,.1)}
+  .nowbox.neutral{border-color:var(--gold-line)}
+  .nowbox.bad{border-color:rgba(192,57,43,.55);box-shadow:inset 0 0 40px rgba(192,57,43,.12);background:linear-gradient(180deg,rgba(60,24,18,.4),rgba(20,12,10,.2))}
+  .nb-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .nb-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
+  body.th .nb-label{font-family:var(--body);letter-spacing:.02em;font-size:13px}
+  .nb-meta{font-family:var(--mono);font-size:10.5px;color:var(--bone-faint)}
+  body.th .nb-meta{font-family:var(--body)}
+  .nb-ref{margin-left:auto;padding:6px 12px;font-size:11px}
+  .nb-body{display:flex;gap:18px;align-items:flex-start}
+  .nb-sigil{font-family:var(--cjk);font-weight:900;font-size:54px;line-height:.9;flex:none;width:72px;text-align:center}
+  .nowbox.good .nb-sigil{color:var(--gold)} .nowbox.neutral .nb-sigil{color:var(--bone-faint)} .nowbox.bad .nb-sigil{color:var(--cinnabar)}
+  .nb-txt h3{margin:0 0 5px;font-family:var(--display);font-style:italic;font-size:26px;color:var(--bone)}
+  body.th .nb-txt h3{font-family:'Noto Serif Thai',serif;font-style:normal;font-weight:700;font-size:23px}
+  .nb-txt p{margin:0;font-size:14.5px;color:var(--bone-dim);max-width:62ch}
+  .nb-disc{margin-top:8px!important;font-size:11.5px!important;color:var(--bone-faint)!important;font-style:italic}
+  @media(max-width:560px){.nb-sigil{font-size:40px;width:52px}.nb-body{gap:12px}}
+  .controls{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin:28px 0 6px;padding:18px 0;border-bottom:1px solid var(--gold-line)}
+  .field label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--bone-faint);margin-bottom:7px}
+  body.th .field label{font-family:var(--body);letter-spacing:.04em;font-size:12px}
+  input[type=date]{background:var(--lacquer2);border:1px solid var(--gold-line);color:var(--bone);font-family:var(--mono);font-size:14px;padding:9px 12px;color-scheme:dark}
+  .stepbtns{display:flex;gap:8px}
+  button{font-family:var(--mono);font-size:12px;letter-spacing:.06em;cursor:pointer;background:var(--lacquer2);border:1px solid var(--gold-line);color:var(--gold-soft);padding:9px 14px;transition:.18s}
+  body.th button{font-family:var(--body)}
+  button:hover{background:var(--ink);color:var(--bone)}
+  button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .pill{margin-left:auto;text-align:right}
+  .pill .term{font-family:var(--cjk);font-size:22px;color:var(--gold-soft);font-weight:600}
+  .pill .gz{font-family:var(--mono);font-size:11px;color:var(--bone-dim);letter-spacing:.08em}
+  body.th .pill .gz{font-family:var(--body);letter-spacing:0}
+
+  .domains{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 4px}
+  .domains button{display:flex;align-items:center;gap:8px;padding:9px 15px}
+  .domains button .c{font-family:var(--cjk);font-size:16px;color:var(--gold-soft)}
+  .domains button.on{background:var(--cinnabar-deep);border-color:var(--cinnabar);color:var(--bone)}
+  .domains button.on .c{color:var(--bone)}
+
+  .stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(20px,3vw,38px);margin-top:18px;align-items:start}
+  @media(max-width:880px){.stage{grid-template-columns:1fr}}
+  .section-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--bone-faint);margin:0 0 14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  body.th .section-label{font-family:var(--body);letter-spacing:.02em;font-size:12.5px}
+  .section-label span{color:var(--gold-soft);text-align:right}
+
+  .board-frame{border:1px solid var(--gold-line);padding:12px;background:rgba(15,11,8,.5);position:relative}
+  .board-frame::before{content:"";position:absolute;inset:5px;border:1px solid rgba(201,162,75,.16);pointer-events:none}
+  .board{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+  .cell{position:relative;background:linear-gradient(160deg,var(--panel),var(--lacquer2));border:1px solid rgba(201,162,75,.14);min-height:130px;padding:9px 9px 8px;overflow:hidden}
+  .cell.aus{background:linear-gradient(160deg,#2c2a17,#20200f);border-color:rgba(201,162,75,.5);box-shadow:inset 0 0 22px rgba(201,162,75,.12)}
+  .cell.aus2{background:linear-gradient(160deg,#23301f,#18220f);border-color:rgba(122,160,131,.45);box-shadow:inset 0 0 22px rgba(122,160,131,.12)}
+  .cell.bad{background:linear-gradient(160deg,#251713,#190f0c);border-color:rgba(192,57,43,.32)}
+  .cell.center{background:linear-gradient(160deg,#241d28,#16121c);border-color:rgba(201,162,75,.22)}
+  .cell.dir{box-shadow:inset 0 0 0 2px var(--gold)}
+  .cell .pnum{position:absolute;top:6px;right:8px;font-family:var(--mono);font-size:10px;color:var(--bone-faint)}
+  .cell .tri{position:absolute;top:5px;left:8px;font-family:var(--cjk);font-size:12px;color:var(--bone-faint)}
+  .cell .god{font-family:var(--cjk);font-size:12px;color:var(--jade-soft);margin-top:16px;letter-spacing:.04em}
+  .cell .star{font-family:var(--cjk);font-size:12px;color:var(--bone-dim);margin-top:1px}
+  .cell .gate{font-family:var(--cjk);font-weight:600;font-size:21px;margin-top:5px;color:var(--bone)}
+  .cell.aus .gate{color:var(--gold-soft)} .cell.aus2 .gate{color:var(--jade-soft)} .cell.bad .gate{color:#C98379}
+  .cell .stems{margin-top:6px;font-family:var(--cjk);font-size:18px;letter-spacing:.12em}
+  .cell .stems .hv{color:var(--gold-soft)} .cell .stems .er{color:var(--bone-faint)} .cell .stems .sep{color:var(--bone-faint);font-size:12px;margin:0 2px}
+  .cell .you{position:absolute;bottom:6px;right:7px;font-family:var(--cjk);font-size:9.5px;color:var(--cinnabar);border:1px solid var(--cinnabar-deep);border-radius:2px;padding:0 3px}
+  .cell .chief{position:absolute;bottom:6px;left:7px;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}
+  .dirtag{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--gold);background:rgba(0,0,0,.4);padding:1px 4px;border:1px solid var(--gold-line)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-family:var(--mono);font-size:10px;color:var(--bone-faint)}
+  body.th .legend{font-family:var(--body);font-size:11.5px}
+  .legend i{display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px;border:1px solid}
+  .legend .g{background:rgba(201,162,75,.4);border-color:var(--gold)} .legend .j{background:rgba(122,160,131,.4);border-color:var(--jade)} .legend .r{background:rgba(192,57,43,.3);border-color:var(--cinnabar)}
+  .legend .y{color:var(--cinnabar)}
+
+  .reading{border:1px solid var(--gold-line);background:rgba(20,16,11,.5);padding:22px 22px 20px}
+  .verdict{display:flex;align-items:center;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--gold-line)}
+  .verdict .score{font-family:var(--display);font-style:italic;font-size:52px;line-height:.85;color:var(--gold-soft)}
+  .verdict .score small{font-size:15px;color:var(--bone-faint);font-style:normal;font-family:var(--mono)}
+  .verdict .vtxt h3{margin:0;font-family:var(--display);font-size:26px;font-weight:600;color:var(--bone)}
+  body.th .verdict .vtxt h3{font-family:'Noto Serif Thai',serif;font-size:24px}
+  .verdict .vtxt p{margin:2px 0 0;font-size:13.5px;color:var(--bone-dim)}
+  .rblock{margin-top:15px}
+  .rblock h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 7px;display:flex;align-items:center;gap:8px}
+  body.th .rblock h4{font-family:var(--body);letter-spacing:.02em;font-size:13px}
+  .rblock h4::after{content:"";flex:1;height:1px;background:var(--gold-line)}
+  .rblock p{margin:0 0 7px;font-size:14.5px;color:var(--bone)}
+  .rblock .cjk{font-family:var(--cjk);color:var(--gold-soft)}
+  .signs{display:flex;gap:18px;flex-wrap:wrap;margin-top:4px}
+  .signs .s{font-size:13px;color:var(--bone-dim)} .signs .s b{color:var(--gold-soft);font-weight:600;display:block;font-size:15px}
+  .formation{margin-top:14px;border:1px solid var(--gold-line);padding:12px 14px;background:rgba(192,57,43,.06)}
+  .formation .fn{font-family:var(--cjk);font-size:18px;color:var(--cinnabar);font-weight:600}
+  .formation p{margin:4px 0 0;font-size:13.5px;color:var(--bone-dim)}
+
+  .hours{margin-top:34px}
+  .hourgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:6px}
+  @media(max-width:880px){.hourgrid{grid-template-columns:repeat(6,1fr)}}
+  @media(max-width:480px){.hourgrid{grid-template-columns:repeat(4,1fr)}}
+  .hour{border:1px solid rgba(201,162,75,.16);background:var(--lacquer2);padding:9px 6px;text-align:center;cursor:pointer;transition:.15s;position:relative}
+  .hour:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .hour.sel{box-shadow:inset 0 0 0 1px var(--gold);border-color:var(--gold)}
+  .hour .br{font-family:var(--cjk);font-size:17px;color:var(--bone)}
+  .hour .tm{font-family:var(--mono);font-size:9px;color:var(--bone-faint);margin-top:2px}
+  .hour .bar{height:4px;margin-top:7px;background:var(--ink);position:relative;overflow:hidden}
+  .hour .bar i{position:absolute;inset:0 100% 0 0}
+  .hour.lvl3 .bar i{right:8%;background:var(--gold)} .hour.lvl2 .bar i{right:38%;background:var(--gold-soft)} .hour.lvl1 .bar i{right:62%;background:var(--jade)} .hour.lvl0 .bar i{right:80%;background:var(--bone-faint)} .hour.lvlneg .bar i{right:55%;background:var(--cinnabar)}
+  .hour .tag{font-family:var(--mono);font-size:8px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;color:var(--bone-faint)}
+  body.th .hour .tag{font-family:var(--body);letter-spacing:0;font-size:10px}
+  .hour.lvl3 .tag,.hour.lvl2 .tag{color:var(--gold-soft)} .hour.lvlneg .tag{color:var(--cinnabar)}
+
+  .windows{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:680px){.windows{grid-template-columns:1fr}}
+  .win{border:1px solid var(--gold-line);padding:16px 18px;background:rgba(20,16,11,.4)}
+  .win.good{border-color:rgba(201,162,75,.4)} .win.bad{border-color:rgba(192,57,43,.3)}
+  .win .wt{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-faint);margin-bottom:6px}
+  body.th .win .wt{font-family:var(--body);letter-spacing:.02em;font-size:12px}
+  .win.good .wt{color:var(--gold-soft)} .win.bad .wt{color:#C98379}
+  .win .wh{font-family:var(--display);font-style:italic;font-size:22px;color:var(--bone)}
+  body.th .win .wh{font-family:var(--mono);font-style:normal}
+  .win .wd{font-size:13px;color:var(--bone-dim);margin-top:4px}
+
+  .trend{margin-top:30px}
+  .trendbars{display:flex;gap:2px;align-items:flex-end;height:74px;border-bottom:1px solid var(--gold-line);padding-bottom:0}
+  .tb{flex:1;background:var(--ink);position:relative;cursor:pointer;min-height:3px;transition:.12s}
+  .tb:hover{outline:1px solid var(--gold)}
+  .tb.lvl3{background:var(--gold)} .tb.lvl2{background:var(--gold-soft)} .tb.lvl1{background:var(--jade)} .tb.lvl0{background:var(--bone-faint)} .tb.lvlneg{background:var(--cinnabar)}
+  .tb.today{outline:2px solid var(--bone)}
+  .trendaxis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;color:var(--bone-faint);margin-top:5px}
+
+  .toolbar{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding-top:18px;border-top:1px solid var(--gold-line)}
+  .toolbar .note{font-family:var(--mono);font-size:10px;color:var(--bone-faint);margin-left:auto;max-width:46ch;text-align:right}
+  body.th .toolbar .note{font-family:var(--body);font-size:11.5px}
+
+  footer{margin-top:40px;border:1px solid var(--cinnabar-deep);background:rgba(126,27,18,.08);padding:18px 22px;font-size:12.5px;color:var(--bone-dim);line-height:1.65}
+  footer b{color:var(--gold-soft);font-weight:600}
+  footer .h{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#C98379;display:block;margin-bottom:8px}
+  body.th footer .h{font-family:var(--body);letter-spacing:.02em;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="langtoggle">
+      <button id="langEN" class="on" onclick="setLang(&#39;en&#39;)">EN</button>
+      <button id="langTH" onclick="setLang(&#39;th&#39;)">ไทย</button>
+    </div>
+    <p class="eyebrow" id="eyebrow">時家奇門 · Hour-Plate Divination · Anno 2026</p>
+    <div class="titlerow">
+      <div class="glyph">遁甲</div>
+      <div class="titletext"><h1 id="mastH1">The Hidden Gate Almanac</h1><p id="mastSub">A Qi Men Dun Jia reading of personal fortune — casting the nine palaces for every two-hour period, anchored to your own natal stem, across wealth, work, love, health, movement and strife.</p></div>
+    </div>
+    <div class="base-chip">
+      <div class="seal" id="baseSeal">戊</div>
+      <div class="meta" id="baseMeta"><b>YOUR BASE — 命主用神</b><br>Born 12 Feb 1990 · 02:00 · UTC+7<br>Natal day-pillar <b>戊申</b> · self-stem <b>戊 (Wù)</b></div>
+    </div>
+  </header>
+
+  <section class="nowbox good" id="nowBox"><div class="nb-head"><span class="nb-label">Your luck right now · 此刻</span><span class="nb-meta">as of 20:19 · 戌時 · reading: Wealth · 8.7 pts</span><button class="nb-ref" onclick="updateNow()">↻ read this moment</button></div><div class="nb-body"><div class="nb-sigil">進</div><div class="nb-txt"><h3>A clear-headed window</h3><p>Your timing is clean right now. If you hold a plan you set in advance, this is a fine moment to act on it — calmly, at your usual size, within the limits you already chose. A favourable chart rewards discipline, not bigger bets. If you have no plan, a good hour is not a reason to invent one.</p><p class="nb-disc">Timing guidance from the chart — not a market prediction. No hour is loss-free.</p></div></div></section>
+
+  <div class="controls">
+    <div class="field"><label id="lblCast">Cast for the day</label>
+      <input type="date" id="datePick" min="2026-01-01" max="2026-12-31" value="2026-06-16"></div>
+    <div class="field"><label id="lblMove">Move</label>
+      <div class="stepbtns"><button id="prevDay">‹ prev</button><button id="todayBtn">today ’26</button><button id="nextDay">next ›</button></div></div>
+    <div class="pill"><div class="term" id="termName">芒種 · Grain in Ear</div><div class="gz" id="dayLine">Day 辛酉 · Yang Dun · Ju 9 · Lower yuan</div></div>
+  </div>
+
+  <p class="section-label" style="margin-bottom:0"><span id="lblDomain">Forecast domain · 用神</span></p>
+  <div class="domains" id="domainBar"><button class="on"><span class="c">財</span>Wealth</button><button class=""><span class="c">事業</span>Career</button><button class=""><span class="c">感情</span>Love</button><button class=""><span class="c">健康</span>Health</button><button class=""><span class="c">出行</span>Travel</button><button class=""><span class="c">是非</span>Disputes</button></div>
+
+  <div class="stage">
+    <div>
+      <p class="section-label"><span id="secBoard">Nine Palaces · 九宮盤</span><span id="hourTitle">寅時 03:00–05:00</span></p>
+      <div class="board-frame"><div class="board" id="board"><div class="cell"><span class="tri">4 巽</span><span class="pnum"></span><div class="god">太陰</div><div class="star">天輔</div><div class="gate">杜門</div><div class="stems"><span class="hv">壬</span><span class="sep">／</span><span class="er">壬</span></div></div><div class="cell aus2"><span class="tri">9 離</span><span class="pnum"></span><div class="god">九地</div><div class="star">天英</div><div class="gate">景門</div><div class="stems"><span class="hv">戊</span><span class="sep">／</span><span class="er">戊</span></div><span class="you">朱·我</span></div><div class="cell bad"><span class="tri">2 坤</span><span class="pnum">·值</span><div class="god">值符</div><div class="star">天芮</div><div class="gate">死門</div><div class="stems"><span class="hv">庚</span><span class="sep">／</span><span class="er">庚</span></div><span class="chief">值符宮</span></div><div class="cell bad"><span class="tri">3 震</span><span class="pnum"></span><div class="god">螣蛇</div><div class="star">天衝</div><div class="gate">傷門</div><div class="stems"><span class="hv">辛</span><span class="sep">／</span><span class="er">辛</span></div></div><div class="cell center"><span class="tri">5 中</span><span class="pnum"></span><div class="god">　</div><div class="star">天禽</div><div class="gate"><span style="color:var(--bone-faint);font-size:13px">中宮·寄坤</span></div><div class="stems"><span class="hv">癸</span><span class="sep">／</span><span class="er">癸</span></div></div><div class="cell bad"><span class="tri">7 兌</span><span class="pnum"></span><div class="god">白虎</div><div class="star">天柱</div><div class="gate">驚門</div><div class="stems"><span class="hv">丙</span><span class="sep">／</span><span class="er">丙</span></div></div><div class="cell aus dir"><span class="tri">8 艮</span><span class="pnum"></span><div class="god">玄武</div><div class="star">天任</div><div class="gate">生門</div><div class="stems"><span class="hv">乙</span><span class="sep">／</span><span class="er">乙</span></div></div><div class="cell aus"><span class="tri">1 坎</span><span class="pnum"></span><div class="god">九天</div><div class="star">天蓬</div><div class="gate">休門</div><div class="stems"><span class="hv">己</span><span class="sep">／</span><span class="er">己</span></div></div><div class="cell aus"><span class="tri">6 乾</span><span class="pnum"></span><div class="god">六合</div><div class="star">天心</div><div class="gate">開門</div><div class="stems"><span class="hv">丁</span><span class="sep">／</span><span class="er">丁</span></div></div></div></div>
+      <div class="legend" id="legend"><span><i class="g"></i>Open / Life / Rest — prosperous</span><span><i class="j"></i>View gate — workable</span><span><i class="r"></i>Harm / Death / Fright — guarded</span><span class="y">朱 you · 符 chief · ▢ lucky direction</span></div>
+    </div>
+    <div>
+      <p class="section-label"><span id="secReading">The Reading · 斷</span><span id="readHour">寅時 · 庚寅</span></p>
+      <div class="reading" id="reading"><div class="verdict"><div class="score">11.7<small>/pts</small></div><div class="vtxt"><h3>Prosperous</h3><p>財旺 — a strongly favourable window. Act with composure.</p></div></div><div class="rblock"><h4>Your position · 用神</h4><p>Your natal stem <span class="cjk">戊</span> falls in palace <span class="cjk">9 離</span>, carrying <span class="cjk">景門</span> and <span class="cjk">九地</span>. A neutral seat — neither pushed nor blocked.</p></div><div class="rblock"><h4>The hour’s gate</h4><p><span class="cjk">景門 View Gate</span> leads — visibility, ideas, presentation. Useful for outreach and study; results ripen later, not now.</p></div><div class="rblock"><h4>Wealth · 財</h4><p>The Life Gate (income) rests in palace <span class="cjk">8</span>; the Open Gate (opportunity) in palace <span class="cjk">6</span>. Conditions favour deliberate, planned action — the kind you would still stand behind if the result were merely average.</p></div><div class="rblock"><h4>Direction &amp; lucky signs · 方位</h4><div class="signs"><div class="s">Auspicious direction<b>NE · 8 艮</b></div><div class="s">Favoured element<b>Earth</b></div><div class="s">Lucky colours<b>yellow &amp; ochre</b></div><div class="s">Lucky number<b>8 · 8</b></div></div></div><div class="formation"><span class="fn">太白同宮</span><p>Twin Metal in one palace — obstruction and clash; delay.</p></div></div>
+    </div>
+  </div>
+
+  <section class="hours">
+    <p class="section-label"><span id="secHours">The Twelve Hours · 十二時辰</span><span id="hoursHint">tap an hour to inspect its chart</span></p>
+    <div class="hourgrid" id="hourGrid"><div class="hour lvl3"><div class="br">子</div><div class="tm">23:00–01:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3"><div class="br">丑</div><div class="tm">01:00–03:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3 sel"><div class="br">寅</div><div class="tm">03:00–05:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3"><div class="br">卯</div><div class="tm">05:00–07:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3"><div class="br">辰</div><div class="tm">07:00–09:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3"><div class="br">巳</div><div class="tm">09:00–11:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3"><div class="br">午</div><div class="tm">11:00–13:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl2"><div class="br">未</div><div class="tm">13:00–15:00</div><div class="bar"><i></i></div><div class="tag">favour</div></div><div class="hour lvl3"><div class="br">申</div><div class="tm">15:00–17:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl3"><div class="br">酉</div><div class="tm">17:00–19:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div><div class="hour lvl2"><div class="br">戌</div><div class="tm">19:00–21:00</div><div class="bar"><i></i></div><div class="tag">favour</div></div><div class="hour lvl3"><div class="br">亥</div><div class="tm">21:00–23:00</div><div class="bar"><i></i></div><div class="tag">prosper</div></div></div>
+    <div class="windows" id="windows"><div class="win good"><div class="wt">Most favourable hour · 吉時</div><div class="wh">03:00–05:00</div><div class="wd">寅時 · score 11.7. The clearest-headed window to act.</div></div><div class="win bad"><div class="wt">Most guarded hour · 慎時</div><div class="wh">13:00–15:00</div><div class="wd">未時 · score 5.7. Slow down, verify, avoid new commitments.</div></div></div>
+
+    <div class="trend">
+      <p class="section-label"><span id="secTrend">Monthly fortune · 月運</span><span id="trendHint">each bar is one day — tap to jump</span></p>
+      <div class="trendbars" id="trendBars"><div class="tb lvl3" title="Day 1 · best 12.4" style="height: 72px;"></div><div class="tb lvl3" title="Day 2 · best 12.6" style="height: 72px;"></div><div class="tb lvl3" title="Day 3 · best 14" style="height: 72px;"></div><div class="tb lvl3" title="Day 4 · best 11.6" style="height: 72px;"></div><div class="tb lvl3" title="Day 5 · best 12.3" style="height: 72px;"></div><div class="tb lvl3" title="Day 6 · best 14.8" style="height: 72px;"></div><div class="tb lvl3" title="Day 7 · best 11.6" style="height: 72px;"></div><div class="tb lvl3" title="Day 8 · best 11.3" style="height: 72px;"></div><div class="tb lvl3" title="Day 9 · best 10.5" style="height: 72px;"></div><div class="tb lvl3" title="Day 10 · best 10" style="height: 72px;"></div><div class="tb lvl3" title="Day 11 · best 14.6" style="height: 72px;"></div><div class="tb lvl3" title="Day 12 · best 12.2" style="height: 72px;"></div><div class="tb lvl3" title="Day 13 · best 14.8" style="height: 72px;"></div><div class="tb lvl3" title="Day 14 · best 13.2" style="height: 72px;"></div><div class="tb lvl3" title="Day 15 · best 14" style="height: 72px;"></div><div class="tb lvl3 today" title="Day 16 · best 11.7" style="height: 72px;"></div><div class="tb lvl3" title="Day 17 · best 12.7" style="height: 72px;"></div><div class="tb lvl3" title="Day 18 · best 12.7" style="height: 72px;"></div><div class="tb lvl3" title="Day 19 · best 14.6" style="height: 72px;"></div><div class="tb lvl3" title="Day 20 · best 14.4" style="height: 72px;"></div><div class="tb lvl3" title="Day 21 · best 14.8" style="height: 72px;"></div><div class="tb lvl3" title="Day 22 · best 13.6" style="height: 72px;"></div><div class="tb lvl3" title="Day 23 · best 10" style="height: 72px;"></div><div class="tb lvl3" title="Day 24 · best 11.7" style="height: 72px;"></div><div class="tb lvl3" title="Day 25 · best 11.1" style="height: 72px;"></div><div class="tb lvl3" title="Day 26 · best 11.3" style="height: 72px;"></div><div class="tb lvl3" title="Day 27 · best 15.2" style="height: 72px;"></div><div class="tb lvl3" title="Day 28 · best 13.3" style="height: 72px;"></div><div class="tb lvl3" title="Day 29 · best 16.3" style="height: 72px;"></div><div class="tb lvl3" title="Day 30 · best 12.2" style="height: 72px;"></div></div>
+      <div class="trendaxis" id="trendAxis"><span>1</span><span>June 2026</span><span>30</span></div>
+    </div>
+
+    <div class="toolbar">
+      <button id="exportDay">⤓ Export this day (CSV)</button><button id="exportMonth">⤓ Export the month (CSV)</button>
+      <span class="note" id="exportNote">Exports list each hour’s gate, deity and a favourable / guarded mark — timing guidance, never a promise of gain.</span>
+    </div>
+  </section>
+
+  <footer><span class="h" id="footH">Read this before you trade on it</span><span id="footBody">Qi Men Dun Jia is a classical <b>divination and timing art</b> — a way to choose auspicious moments to <b>act with clarity</b>, used here for study. It cannot predict gold, currency or stock prices, which move on rates, the dollar and world events no birth chart holds. <b>No hour is loss-free.</b> Every real trader loses on individual trades; survival comes from position-sizing and risk limits, not a favourable star. Read “prosperous” as <i>act calmly</i> and “guarded” as <i>slow down and verify</i> — not as a signal to risk money you can’t afford to lose. This is not financial advice.</span></footer>
+</div>
+
+<script>
+/* ============================================================
+   Qi Men Dun Jia — hour-plate engine (轉盤 school, 拆補 yuan).
+   Study / divination instrument. School conventions vary at
+   calendar boundaries; relative within-day quality is robust.
+   ============================================================ */
+const STEMS=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
+const STEM_PY=['Jiǎ','Yǐ','Bǐng','Dīng','Wù','Jǐ','Gēng','Xīn','Rén','Guǐ'];
+const BRANCHES=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
+const HOUR_RANGE=['23:00–01:00','01:00–03:00','03:00–05:00','05:00–07:00','07:00–09:00','09:00–11:00','11:00–13:00','13:00–15:00','15:00–17:00','17:00–19:00','19:00–21:00','21:00–23:00'];
+const HOUR_CLOCK=[[23,1],[1,3],[3,5],[5,7],[7,9],[9,11],[11,13],[13,15],[15,17],[17,19],[19,21],[21,23]];
+const RING9=[1,2,3,4,5,6,7,8,9], RING8=[1,2,3,4,6,7,8,9];
+const STAR_HOME={1:'天蓬',2:'天芮',3:'天衝',4:'天輔',5:'天禽',6:'天心',7:'天柱',8:'天任',9:'天英'};
+const GATE_HOME={1:'休門',2:'死門',3:'傷門',4:'杜門',6:'開門',7:'驚門',8:'生門',9:'景門'};
+const TRIGRAM={1:'坎',2:'坤',3:'震',4:'巽',5:'中',6:'乾',7:'兌',8:'艮',9:'離'};
+const DUN_ORDER=['戊','己','庚','辛','壬','癸','丁','丙','乙'];
+const XUN_YI={0:'戊',10:'己',20:'庚',30:'辛',40:'壬',50:'癸'};
+const GOD_SEQ=['值符','螣蛇','太陰','六合','白虎','玄武','九地','九天'];
+const LAYOUT=[4,9,2,3,5,7,8,1,6];
+const PALACE_DIR={1:['N','ทิศเหนือ'],2:['SW','ทิศตะวันตกเฉียงใต้'],3:['E','ทิศตะวันออก'],4:['SE','ทิศตะวันออกเฉียงใต้'],5:['Center','ส่วนกลาง'],6:['NW','ทิศตะวันตกเฉียงเหนือ'],7:['W','ทิศตะวันตก'],8:['NE','ทิศตะวันออกเฉียงเหนือ'],9:['S','ทิศใต้']};
+const PALACE_ELEM={1:'water',2:'earth',3:'wood',4:'wood',5:'earth',6:'metal',7:'metal',8:'earth',9:'fire'};
+const ELEM={water:{en:'Water',th:'ธาตุน้ำ',color:{en:'black & deep blue',th:'ดำ–น้ำเงินเข้ม'},num:1},
+  wood:{en:'Wood',th:'ธาตุไม้',color:{en:'green',th:'เขียว'},num:3},
+  fire:{en:'Fire',th:'ธาตุไฟ',color:{en:'red & purple',th:'แดง–ม่วง'},num:9},
+  earth:{en:'Earth',th:'ธาตุดิน',color:{en:'yellow & ochre',th:'เหลือง–น้ำตาล'},num:8},
+  metal:{en:'Metal',th:'ธาตุทอง',color:{en:'white & gold',th:'ขาว–ทอง'},num:6}};
+
+const TERMS=[
+  ['冬至','Winter Solstice','เหมายัน',new Date('2025-12-22'),true,[1,7,4]],
+  ['小寒','Minor Cold','เสี่ยวหาน',new Date('2026-01-05'),true,[2,8,5]],
+  ['大寒','Major Cold','ต้าหาน',new Date('2026-01-20'),true,[3,9,6]],
+  ['立春','Start of Spring','ลี่ชุน',new Date('2026-02-04'),true,[8,5,2]],
+  ['雨水','Rain Water','ฝนใส',new Date('2026-02-18'),true,[9,6,3]],
+  ['驚蟄','Awakening Insects','ตื่นแมลง',new Date('2026-03-05'),true,[1,7,4]],
+  ['春分','Spring Equinox','วสันตวิษุวัต',new Date('2026-03-20'),true,[3,9,6]],
+  ['清明','Clear & Bright','เช็งเม้ง',new Date('2026-04-05'),true,[4,1,7]],
+  ['穀雨','Grain Rain','ฝนเมล็ดข้าว',new Date('2026-04-20'),true,[5,2,8]],
+  ['立夏','Start of Summer','ลี่เซี่ย',new Date('2026-05-05'),true,[4,1,7]],
+  ['小滿','Grain Full','เมล็ดเต็ม',new Date('2026-05-21'),true,[5,2,8]],
+  ['芒種','Grain in Ear','ข้าวออกรวง',new Date('2026-06-05'),true,[6,3,9]],
+  ['夏至','Summer Solstice','ครีษมายัน',new Date('2026-06-21'),false,[9,3,6]],
+  ['小暑','Minor Heat','ร้อนน้อย',new Date('2026-07-07'),false,[8,2,5]],
+  ['大暑','Major Heat','ร้อนใหญ่',new Date('2026-07-23'),false,[7,1,4]],
+  ['立秋','Start of Autumn','ลี่ชิว',new Date('2026-08-07'),false,[2,5,8]],
+  ['處暑','End of Heat','สิ้นร้อน',new Date('2026-08-23'),false,[1,4,7]],
+  ['白露','White Dew','น้ำค้างขาว',new Date('2026-09-07'),false,[9,3,6]],
+  ['秋分','Autumn Equinox','ศารทวิษุวัต',new Date('2026-09-23'),false,[7,1,4]],
+  ['寒露','Cold Dew','น้ำค้างเย็น',new Date('2026-10-08'),false,[6,9,3]],
+  ['霜降','Frost Descent','น้ำค้างแข็ง',new Date('2026-10-23'),false,[5,8,2]],
+  ['立冬','Start of Winter','ลี่ตง',new Date('2026-11-07'),false,[6,9,3]],
+  ['小雪','Minor Snow','หิมะน้อย',new Date('2026-11-22'),false,[5,8,2]],
+  ['大雪','Major Snow','หิมะใหญ่',new Date('2026-12-07'),false,[4,7,1]],
+  ['冬至','Winter Solstice','เหมายัน',new Date('2026-12-22'),true,[1,7,4]]
+];
+
+/* ---- calendar ---- */
+function jdn(y,m,d){const a=Math.floor((14-m)/12),yy=y+4800-a,mm=m+12*a-3;
+  return d+Math.floor((153*mm+2)/5)+365*yy+Math.floor(yy/4)-Math.floor(yy/100)+Math.floor(yy/400)-32045;}
+function dayGZ(date){return ((jdn(date.getFullYear(),date.getMonth()+1,date.getDate())+49)%60+60)%60;}
+function gzName(i){return STEMS[i%10]+BRANCHES[i%12];}
+function hourGZindex(dayStem,branchIdx){const start=[0,2,4,6,8][dayStem%5],s=(start+branchIdx)%10;
+  for(let k=0;k<60;k++) if(k%10===s&&k%12===branchIdx) return k;}
+function findTerm(date){let t=TERMS[0];for(const e of TERMS){if(e[3]<=date)t=e;else break;}return t;}
+function futouYuan(date){let d=new Date(date);
+  for(let k=0;k<10;k++){const gi=dayGZ(d),s=gi%10,b=gi%12;
+    if(s===0||s===5){if([0,6,3,9].includes(b))return 0;if([2,8,5,11].includes(b))return 1;return 2;}
+    d.setDate(d.getDate()-1);} return 0;}
+const mapRing8=p=>p===5?2:p;
+
+function cast(date,branchIdx){
+  const term=findTerm(date),isYang=term[4],yuan=futouYuan(date),ju=term[5][yuan];
+  const earth={}; let p=ju;
+  for(const s of DUN_ORDER){earth[p]=s; p=isYang?(p===9?1:p+1):(p===1?9:p-1);}
+  const dgi=dayGZ(date),dayStem=dgi%10,hgi=hourGZindex(dayStem,branchIdx);
+  const hStem=STEMS[hgi%10],xunHead=Math.floor(hgi/10)*10,yi=XUN_YI[xunHead];
+  const palOf=stem=>{for(const k of RING9) if(earth[k]===stem) return k;};
+  const H=palOf(yi),lookStem=(hStem==='甲')?yi:hStem,Ph=palOf(lookStem);
+  const chiefStar=STAR_HOME[H],chiefGate=GATE_HOME[mapRing8(H)];
+  function rot(home,ring,from,to){const n=ring.length,fi=ring.indexOf(from),ti=ring.indexOf(to),off=ti-fi,out={};
+    for(let i=0;i<n;i++){let j=((i+off)%n+n)%n; out[ring[j]]=home[ring[i]];} return out;}
+  const stars=rot(STAR_HOME,RING9,H,Ph),heaven=rot(earth,RING9,H,Ph),gates=rot(GATE_HOME,RING8,mapRing8(H),mapRing8(Ph));
+  const gods={}; let gi=RING8.indexOf(mapRing8(Ph));
+  for(let k=0;k<8;k++){let idx=isYang?gi+k:gi-k; idx=((idx%8)+8)%8; gods[RING8[idx]]=GOD_SEQ[k];}
+  return {term,isYang,yuan,ju,earth,heaven,stars,gates,gods,H,Ph,chiefStar,chiefGate,hgi,hStem,dgi};
+}
+
+/* ---- scoring ---- */
+const GATE_SCORE={'開門':3,'生門':3,'休門':2,'景門':1,'杜門':-1,'傷門':-2,'驚門':-2,'死門':-3};
+const STAR_SCORE={'天心':2,'天任':1,'天禽':1,'天輔':1,'天英':0,'天柱':-1,'天蓬':-1,'天衝':0,'天芮':-2};
+const GOD_SCORE={'值符':2,'六合':2,'太陰':1,'九天':1,'九地':1,'白虎':-1,'勾陳':-1,'螣蛇':-1,'玄武':-2};
+const WONDER=['乙','丙','丁'];
+const round=x=>Math.round(x*10)/10;
+const ymd=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function cellQ(ch,pal){let s=(GATE_SCORE[ch.gates[pal]]||0)+(STAR_SCORE[ch.stars[pal]]||0)+(GOD_SCORE[ch.gods[pal]]||0);
+  if(WONDER.includes(ch.heaven[pal]))s+=1; if(WONDER.includes(ch.earth[pal]))s+=0.5; return s;}
+function pgate(ch,g){for(const k of RING8)if(ch.gates[k]===g)return k;}
+function pgod(ch,g){for(const k of RING8)if(ch.gods[k]===g)return k;}
+function pstar(ch,s){for(const k of RING9)if(ch.stars[k]===s)return k;}
+function youPalace(ch){const self=BASE.stemChar; if(self==='甲')return ch.H;
+  for(const k of RING9) if(ch.earth[k]===self) return k; return null;}
+function horseBranch(b){if([8,0,4].includes(b))return 2;if([2,6,10].includes(b))return 8;if([5,9,1].includes(b))return 11;return 5;}
+const BRANCH_PALACE={2:8,8:2,11:6,5:4};
+
+function domainScore(ch,key){
+  const life=pgate(ch,'生門'),open=pgate(ch,'開門'),yp=youPalace(ch),yb=yp?cellQ(ch,yp)*0.5:0;
+  if(key==='wealth') return round(cellQ(ch,life)*1.1+cellQ(ch,open)*0.8+yb);
+  if(key==='career') return round(cellQ(ch,open)*1.1+cellQ(ch,pgod(ch,'值符'))*0.6+yb);
+  if(key==='love'){let b=cellQ(ch,pgod(ch,'六合'))*1.0+cellQ(ch,pgod(ch,'太陰'))*0.4;
+    for(const k of RING9) if(ch.earth[k]==='乙'||ch.heaven[k]==='乙'){if(['開門','生門','休門'].includes(ch.gates[k]))b+=1.2;} return round(b+2);}
+  if(key==='health'){const heart=pstar(ch,'天心'),ill=pstar(ch,'天芮');let s=4+cellQ(ch,heart)*0.5;
+    if((GATE_SCORE[ch.gates[ill]]||0)<0)s-=1.5;
+    if(yp){const g=ch.gates[yp];if(g==='死門'||g==='傷門')s-=2; if(ch.stars[yp]==='天心'||ch.stars[yp]==='天禽')s+=1; if(ch.stars[yp]==='天芮')s-=1.5;} return round(s);}
+  if(key==='travel'){const hp=BRANCH_PALACE[horseBranch(ch.dgi%12)];return round(cellQ(ch,open)*1.0+cellQ(ch,hp)*0.6+yb);}
+  if(key==='conflict'){let risk=0;const focus=[yp,ch.Ph].filter(Boolean);
+    for(const k of focus){const g=ch.gates[k],gd=ch.gods[k],st=ch.stars[k];
+      if(g==='傷門'||g==='驚門')risk+=2.5; if(g==='死門')risk+=1.5; if(g==='開門'||g==='生門'||g==='休門')risk-=1.5;
+      if(gd==='白虎'||gd==='玄武')risk+=2; if(gd==='勾陳')risk+=1; if(gd==='六合'||gd==='太陰')risk-=1.5;
+      if(st==='天蓬')risk+=1;}
+    return round(5-risk);}
+  return 0;
+}
+function domainDir(ch,key){
+  if(key==='wealth')return pgate(ch,'生門'); if(key==='career')return pgate(ch,'開門');
+  if(key==='love')return pgod(ch,'六合'); if(key==='health')return pstar(ch,'天心');
+  if(key==='travel')return BRANCH_PALACE[horseBranch(ch.dgi%12)]; if(key==='conflict')return pgate(ch,'傷門'); }
+
+function formation(ch){
+  const h=ch.heaven[ch.Ph],e=ch.earth[ch.Ph];
+  const P={
+    '丙戊':['青龍返首','Azure Dragon Returns — a turn toward fortune; quiet help surfaces.','มังกรเขียวหันกลับ — คราวพลิกเป็นคุณ มีผู้ช่วยเร้นปรากฏ'],
+    '戊丙':['飛鳥跌穴','Bird Drops to its Nest — opportunity lands of its own accord.','วิหคร่อนสู่รัง — โอกาสมาถึงเองโดยมิต้องไขว่คว้า'],
+    '乙辛':['青龍逃走','Dragon Slips Away — gains leak; hold rather than chase.','มังกรหลบหนี — ลาภรั่วไหล พึงรักษามากกว่าไล่ตาม'],
+    '辛乙':['白虎猖狂','White Tiger Rages — friction and abrupt change; shun haste.','พยัคฆ์ขาวคะนอง — เกิดแรงปะทะฉับพลัน อย่าผลีผลาม'],
+    '庚庚':['太白同宮','Twin Metal in one palace — obstruction and clash; delay.','โลหะซ้อนวัง — ติดขัดและปะทะ พึงรั้งรอ'],
+    '癸丁':['螣蛇夭矯','Serpent Coils — illusion and false hope; verify everything.','อสรพิษพันเกี่ยว — มายาและความเพ้อหวัง พึงตรวจสอบทุกสิ่ง']
+  };
+  let f=P[h+e];
+  if(!f && WONDER.includes(h) && ['開門','生門','休門'].includes(ch.gates[ch.Ph]))
+    f=['三奇得使','Three Wonders meet an open gate — an auspicious convergence.','สามมณีต้องประตูมงคล — ฤกษ์ประจวบเป็นมงคล'];
+  return f;
+}
+
+/* ---- domains ---- */
+const DOMAINS=[
+  {key:'wealth', c:'財', en:'Wealth', th:'ทรัพย์'},
+  {key:'career', c:'事業', en:'Career', th:'การงาน'},
+  {key:'love',   c:'感情', en:'Love', th:'ความรัก'},
+  {key:'health', c:'健康', en:'Health', th:'สุขภาพ'},
+  {key:'travel', c:'出行', en:'Travel', th:'เดินทาง'},
+  {key:'conflict',c:'是非', en:'Disputes', th:'วิวาทคดี'}
+];
+
+/* ---- language ---- */
+const L={
+ en:{
+  eyebrow:'時家奇門 · Hour-Plate Divination · Anno 2026',
+  h1:'The Hidden Gate Almanac',
+  sub:'A Qi Men Dun Jia reading of personal fortune — casting the nine palaces for every two-hour period, anchored to your own natal stem, across wealth, work, love, health, movement and strife.',
+  baseMeta:(gz,st)=>`<b>YOUR BASE — 命主用神</b><br>Born 12 Feb 1990 · 02:00 · UTC+7<br>Natal day-pillar <b>${gz}</b> · self-stem <b>${st}</b>`,
+  lblCast:'Cast for the day', lblMove:'Move', prev:'‹ prev', today:"today ’26", next:'next ›',
+  lblDomain:'Forecast domain · 用神',
+  secBoard:'Nine Palaces · 九宮盤', secReading:'The Reading · 斷',
+  secHours:'The Twelve Hours · 十二時辰', hoursHint:'tap an hour to inspect its chart',
+  secTrend:'Monthly fortune · 月運', trendHint:'each bar is one day — tap to jump',
+  legend:'<span><i class="g"></i>Open / Life / Rest — prosperous</span><span><i class="j"></i>View gate — workable</span><span><i class="r"></i>Harm / Death / Fright — guarded</span><span class="y">朱 you · 符 chief · ▢ lucky direction</span>',
+  winBest:'Most favourable hour · 吉時', winGuard:'Most guarded hour · 慎時',
+  exportDay:'⤓ Export this day (CSV)', exportMonth:'⤓ Export the month (CSV)',
+  exportNote:'Exports list each hour’s gate, deity and a favourable / guarded mark — timing guidance, never a promise of gain.',
+  footH:'Read this before you trade on it',
+  footBody:'Qi Men Dun Jia is a classical <b>divination and timing art</b> — a way to choose auspicious moments to <b>act with clarity</b>, used here for study. It cannot predict gold, currency or stock prices, which move on rates, the dollar and world events no birth chart holds. <b>No hour is loss-free.</b> Every real trader loses on individual trades; survival comes from position-sizing and risk limits, not a favourable star. Read “prosperous” as <i>act calmly</i> and “guarded” as <i>slow down and verify</i> — not as a signal to risk money you can’t afford to lose. This is not financial advice.',
+  verdict:{prosper:['Prosperous','財旺 — a strongly favourable window. Act with composure.'],
+    favour:['Favourable','吉 — supportive conditions for measured action.'],
+    work:['Workable','平 — neutral. Routine matters are fine; nothing forced.'],
+    guard:['Guarded','慎 — thin energy. Prefer waiting and verifying.'],
+    adverse:['Adverse','凶 — guard your base; avoid new commitments.']},
+  tags:{3:'prosper',2:'favour',1:'workable',0:'guarded',neg:'adverse'},
+  dayLine:(gz,dun,ju,yu)=>`Day ${gz} · ${dun} · Ju ${ju} · ${yu} yuan`,
+  dun:['Yin Dun','Yang Dun'], yuan:['Upper','Middle','Lower'],
+  h_position:'Your position · 用神', h_gate:'The hour’s gate', h_domain:k=>({wealth:'Wealth · 財',career:'Career · 事業',love:'Love · 感情',health:'Health · 健康',travel:'Travel · 出行',conflict:'Disputes · 是非'}[k]),
+  h_signs:'Direction & lucky signs · 方位', h_formation:'Formation · 格局',
+  signEl:'Favoured element', signColor:'Lucky colours', signNum:'Lucky number', signDir:'Auspicious direction',
+  now:{label:'Your luck right now · 此刻', asof:'as of', refresh:'↻ read this moment', dom:'reading',
+    disc:'Timing guidance from the chart — not a market prediction. No hour is loss-free.',
+    msg:{
+      good:['A clear-headed window','Your timing is clean right now. If you hold a plan you set in advance, this is a fine moment to act on it — calmly, at your usual size, within the limits you already chose. A favourable chart rewards discipline, not bigger bets. If you have no plan, a good hour is not a reason to invent one.'],
+      neutral:['Neutral footing','Nothing is pushing you. Routine matters are fine, but there is no edge here to force a move. If you are unsure, wait for a clearer window.'],
+      bad:['Hold — this is not the hour','The timing is murky and the ground is thin. The urge to act right now is the very thing to distrust. Close the chart, step away, sleep on it. The capital you keep today can be deployed on a clearer day. Do not chase.']}}
+ },
+ th:{
+  eyebrow:'ตำราลับฉีเหมินตุ้นเจี่ย · ศาสตร์เลือกฤกษ์ยาม · ศักราช ๒๕๖๙',
+  h1:'ตำราพยากรณ์ประตูเร้นลับ',
+  sub:'วิชาฉีเหมินตุ้นเจี่ย ศาสตร์หยั่งดวงแห่งบูรพาจารย์ — ตั้งดวงเก้าวังทุกสองยาม อิงธาตุประจำวันเกิดของท่านเป็นหลัก หยั่งคราวรุ่งและคราวพึงระวังทั้งทรัพย์ การงาน ความรัก สุขภาพ การเดินทาง และวิวาท',
+  baseMeta:(gz,st)=>`<b>ดวงกำเนิดของท่าน — เทพประจำชะตา</b><br>ประสูติ ๑๒ ก.พ. ๒๕๓๓ · ๐๒:๐๐ น. · UTC+7<br>เสาวันเกิด <b>${gz}</b> · ธาตุประจำตน <b>${st}</b>`,
+  lblCast:'ตั้งดวงสำหรับวัน', lblMove:'เลื่อนวัน', prev:'‹ ก่อน', today:'วันนี้ ๖๙', next:'ถัด ›',
+  lblDomain:'หมวดพยากรณ์ · 用神',
+  secBoard:'เก้าวัง · 九宮盤', secReading:'คำพยากรณ์ · 斷',
+  secHours:'สิบสองยาม · 十二時辰', hoursHint:'แตะยามเพื่อดูดวงประจำยาม',
+  secTrend:'ดวงรายเดือน · 月運', trendHint:'แต่ละแท่งคือหนึ่งวัน แตะเพื่อไป',
+  legend:'<span><i class="g"></i>เปิด / ชีวิต / พัก — รุ่งเรือง</span><span><i class="j"></i>ประตูทิวทัศน์ — พอใช้</span><span><i class="r"></i>ภัย / มรณะ / ตระหนก — พึงระวัง</span><span class="y">朱 ตัวท่าน · 符 ขุนพล · ▢ ทิศมงคล</span>',
+  winBest:'ยามเป็นคุณที่สุด · 吉時', winGuard:'ยามพึงระวังที่สุด · 慎時',
+  exportDay:'⤓ บันทึกวันนี้ (CSV)', exportMonth:'⤓ บันทึกทั้งเดือน (CSV)',
+  exportNote:'ไฟล์ระบุประตูและเทพประจำแต่ละยาม พร้อมเครื่องหมายคุณ/ระวัง — เป็นการชี้ฤกษ์ มิใช่คำมั่นว่าจะได้กำไร',
+  footH:'พึงอ่านก่อนนำไปใช้',
+  footBody:'ฉีเหมินตุ้นเจี่ยเป็น<b>ศาสตร์พยากรณ์และเลือกฤกษ์</b>แต่โบราณ ใช้เพื่อการศึกษาและไตร่ตรอง มิอาจล่วงรู้ราคาทองหรือค่าเงิน อันแปรไปตามดอกเบี้ย เงินดอลลาร์ และเหตุการณ์โลกซึ่งไม่มีในดวงผู้ใด <b>ไม่มียามใดปราศจากการขาดทุน</b> นักค้าทุกผู้ย่อมมีแพ้ชนะ ความอยู่รอดมาแต่การคุมความเสี่ยงและกำหนดขนาดการลงทุน หาใช่ดาวดวงดีไม่ จงถือ “ยามรุ่ง” เป็นสัญญาณให้ลงมือด้วยใจนิ่ง และ “ยามระวัง” ให้ชะลอและตรวจตรา — มิใช่ให้เสี่ยงเงินเกินกำลัง นี่มิใช่คำแนะนำทางการเงิน',
+  verdict:{prosper:['รุ่งโรจน์','財旺 — ฤกษ์ดีนัก ท่านพึงลงมือด้วยใจสงบ'],
+    favour:['เป็นคุณ','吉 — ฟ้าเอื้อ เหมาะแก่การลงมืออย่างมีสติ'],
+    work:['ราบเรียบ','平 — เสมอตัว กิจวัตรไม่ขัดข้อง อย่าฝืน'],
+    guard:['พึงระวัง','慎 — ฤกษ์อ่อน ควรนิ่งรอและตรวจตราให้ถ้วนถี่'],
+    adverse:['อัปมงคล','凶 — พึงรักษาฐานทัพ งดการริเริ่มใหม่']},
+  tags:{3:'รุ่ง',2:'คุณ',1:'เรียบ',0:'ระวัง',neg:'ร้าย'},
+  dayLine:(gz,dun,ju,yu)=>`วัน ${gz} · ${dun} · จวี๋ ${ju} · ยฺเหวียน${yu}`,
+  dun:['อินตุ้น','หยางตุ้น'], yuan:['บน','กลาง','ล่าง'],
+  h_position:'ที่ตั้งของท่าน · 用神', h_gate:'ประตูประจำยาม', h_domain:k=>({wealth:'ทรัพย์สิน · 財',career:'การงาน · 事業',love:'ความรัก · 感情',health:'สุขภาพ · 健康',travel:'การเดินทาง · 出行',conflict:'วิวาทคดี · 是非'}[k]),
+  h_signs:'ทิศและเครื่องหมายมงคล · 方位', h_formation:'ตำรับดวง · 格局',
+  signEl:'ธาตุอุปถัมภ์', signColor:'สีมงคล', signNum:'เลขมงคล', signDir:'ทิศมงคล',
+  now:{label:'ดวงของท่าน ณ ขณะนี้ · 此刻', asof:'ณ เวลา', refresh:'↻ อ่านฤกษ์ขณะนี้', dom:'หมวด',
+    disc:'เป็นการชี้ฤกษ์จากดวง มิใช่คำพยากรณ์ราคาตลาด ไม่มียามใดปราศจากการขาดทุน',
+    msg:{
+      good:['ฤกษ์ใจแจ่ม','บัดนี้ฤกษ์ของท่านใสสะอาด หากท่านมีแผนอันวางไว้แต่ต้น ยามนี้เหมาะแก่การลงมือตามนั้น — ด้วยใจสงบ ขนาดเท่าเดิม ภายในขอบเขตที่ท่านกำหนดไว้ก่อนแล้ว ฤกษ์ดีนั้นให้คุณแก่ผู้มีวินัย หาใช่ผู้เพิ่มเดิมพันไม่ หากท่านยังไร้แผน ฤกษ์งามก็มิใช่เหตุให้คิดแผนขึ้นโดยพลัน'],
+      neutral:['ยืนบนพื้นราบ','ไม่มีสิ่งใดผลักดันท่าน กิจวัตรทั่วไปไม่ขัดข้อง หากแต่ไร้ช่องได้เปรียบให้ฝืนลงมือ หากท่านยังลังเล พึงรอฤกษ์ที่แจ่มกว่านี้'],
+      bad:['พึงรั้งทัพ — มิใช่ยามนี้','ฤกษ์ขมุกขมัวและชัยภูมิบางเบา ความอยากลงมือ ณ บัดนี้ คือสิ่งที่ท่านพึงระแวงยิ่งนัก จงปิดดวง ถอยออกมา และข้ามคืนไปก่อน ทรัพย์ที่ท่านรักษาไว้ในวันนี้ ย่อมนำไปใช้ในวันที่ฟ้าเปิดกว่านี้ได้ อย่าได้ไล่ตาม'],}}
+ }
+};
+let lang='en';
+function T(){return L[lang];}
+
+/* gate & god phrases (bilingual) */
+const GATE_TXT={
+ '開門':{en:'<span class="cjk">開門 Open Gate</span> rules this window — beginnings, authority and outward moves. Good for launching, negotiating and stepping toward opportunity.',
+        th:'<span class="cjk">開門 ประตูเปิด</span> ครองยามนี้ — ฤกษ์แห่งการเริ่มต้น อำนาจ และการรุกออก เหมาะแก่การริเริ่ม เจรจา และก้าวเข้าหาโอกาส'},
+ '生門':{en:'<span class="cjk">生門 Life Gate</span> stands prominent — the strongest wealth gate: income, growth, anything you wish to compound. Favourable for earning and building.',
+        th:'<span class="cjk">生門 ประตูชีวิต</span> เด่นนัก — ประตูทรัพย์อันแรงกล้าที่สุด ว่าด้วยรายได้และการเติบโต เหมาะแก่การหาทรัพย์และสร้างฐาน'},
+ '休門':{en:'<span class="cjk">休門 Rest Gate</span> presides — steady, unhurried energy. Best for planning, alliances, recovery and slow accumulation, not bold strokes.',
+        th:'<span class="cjk">休門 ประตูพัก</span> เป็นใหญ่ — พลังนิ่งและเนิบช้า เหมาะแก่การวางแผน ผูกมิตร พักฟื้น และสะสมทีละน้อย มิใช่การโหมแรง'},
+ '景門':{en:'<span class="cjk">景門 View Gate</span> leads — visibility, ideas, presentation. Useful for outreach and study; results ripen later, not now.',
+        th:'<span class="cjk">景門 ประตูทิวทัศน์</span> นำหน้า — ความเด่นชัด ความคิด และการนำเสนอ เหมาะแก่การประชาสัมพันธ์และค้นคว้า ผลจะงอกงามภายหลัง'},
+ '杜門':{en:'<span class="cjk">杜門 Block Gate</span> dominates — concealment and defence. Guard what you hold, study quietly, do not expose your plans.',
+        th:'<span class="cjk">杜門 ประตูปิด</span> ครอบงำ — การปกปิดและตั้งรับ พึงรักษาสิ่งที่มี ศึกษาเงียบ ๆ และอย่าเผยแผนการ'},
+ '傷門':{en:'<span class="cjk">傷門 Harm Gate</span> is active — competition, friction, loss through haste. Avoid disputes and impulsive commitments.',
+        th:'<span class="cjk">傷門 ประตูภัย</span> ตื่นตัว — การแข่งขัน แรงเสียดทาน และความเสียหายแต่ความรีบ พึงเว้นการวิวาทและการผูกมัดโดยพลการ'},
+ '驚門':{en:'<span class="cjk">驚門 Fright Gate</span> rules — shocks, rumours, volatility. Expect noise; verify before reacting.',
+        th:'<span class="cjk">驚門 ประตูตระหนก</span> ครอง — ความตื่นตระหนก ข่าวลือ และความผันผวน พึงพิสูจน์ก่อนตอบโต้'},
+ '死門':{en:'<span class="cjk">死門 Death Gate</span> sits heavy — stagnation and dead ends. Poor for new ventures; close out and wait.',
+        th:'<span class="cjk">死門 ประตูมรณะ</span> ตั้งหนัก — ความชะงักงันและทางตัน ไม่เหมาะริเริ่มสิ่งใหม่ พึงปิดงานเก่าและรอคอย'}
+};
+const GOD_TXT={
+ '值符':{en:'with <span class="cjk">值符</span> the Chief lending weight and clear authority',th:'มี <span class="cjk">值符</span> ขุนพลเสริมบารมีและอำนาจอันแจ่มชัด'},
+ '六合':{en:'with <span class="cjk">六合</span> favouring partnership, deals and accord',th:'มี <span class="cjk">六合</span> เอื้อการร่วมมือ การตกลง และความสมานฉันท์'},
+ '太陰':{en:'with <span class="cjk">太陰</span> rewarding discretion and quiet groundwork',th:'มี <span class="cjk">太陰</span> ให้คุณแก่ความลับและการเตรียมการเงียบ ๆ'},
+ '九天':{en:'with <span class="cjk">九天</span> favouring bold expansion and reach',th:'มี <span class="cjk">九天</span> หนุนการแผ่ขยายอย่างกล้าหาญ'},
+ '九地':{en:'with <span class="cjk">九地</span> rewarding patience and a defensive stance',th:'มี <span class="cjk">九地</span> ให้คุณแก่ความอดทนและการตั้งรับ'},
+ '白虎':{en:'though <span class="cjk">白虎</span> brings volatility — temper any aggression',th:'แต่ <span class="cjk">白虎</span> นำความผันผวน พึงข่มความห้าวหาญ'},
+ '勾陳':{en:'though <span class="cjk">勾陳</span> hints at entanglement and delay',th:'แต่ <span class="cjk">勾陳</span> ส่อความพัวพันและล่าช้า'},
+ '螣蛇':{en:'though <span class="cjk">螣蛇</span> warns of illusion and over-hope',th:'แต่ <span class="cjk">螣蛇</span> เตือนเรื่องมายาและความเพ้อหวัง'},
+ '玄武':{en:'though <span class="cjk">玄武</span> warns of deceit or hidden leakage — vet counterparties',th:'แต่ <span class="cjk">玄武</span> เตือนการลวงและการรั่วไหลเร้นลับ พึงตรวจคู่กรณี'}
+};
+
+/* ---- verdict / level ---- */
+function verdictId(s){if(s>=7)return 'prosper';if(s>=4)return 'favour';if(s>=1)return 'work';if(s>=-2)return 'guard';return 'adverse';}
+function level(s){if(s>=7)return 3;if(s>=4)return 2;if(s>=1)return 1;if(s>=-2)return 0;return 'neg';}
+
+/* ---- state ---- */
+let BASE={}, curDate=new Date('2026-06-16T00:00:00'), curHour=2, domain='wealth';
+function initBase(){const bd=new Date('1990-02-12T00:00:00'),gi=dayGZ(bd);
+  BASE={gzIndex:gi,name:gzName(gi),stemChar:STEMS[gi%10],stemPy:STEM_PY[gi%10]};
+  document.getElementById('baseSeal').textContent=BASE.stemChar;}
+
+/* ---- static text ---- */
+function setStatic(){
+  const x=T();document.body.classList.toggle('th',lang==='th');document.documentElement.lang=lang;
+  document.getElementById('langEN').classList.toggle('on',lang==='en');
+  document.getElementById('langTH').classList.toggle('on',lang==='th');
+  document.getElementById('eyebrow').textContent=x.eyebrow;
+  document.getElementById('mastH1').textContent=x.h1;
+  document.getElementById('mastSub').textContent=x.sub;
+  document.getElementById('baseMeta').innerHTML=x.baseMeta(BASE.name,BASE.stemChar+' ('+BASE.stemPy+')');
+  document.getElementById('lblCast').textContent=x.lblCast;
+  document.getElementById('lblMove').textContent=x.lblMove;
+  document.getElementById('prevDay').textContent=x.prev;
+  document.getElementById('todayBtn').textContent=x.today;
+  document.getElementById('nextDay').textContent=x.next;
+  document.getElementById('lblDomain').textContent=x.lblDomain;
+  document.getElementById('secBoard').textContent=x.secBoard;
+  document.getElementById('secReading').textContent=x.secReading;
+  document.getElementById('secHours').textContent=x.secHours;
+  document.getElementById('hoursHint').textContent=x.hoursHint;
+  document.getElementById('secTrend').textContent=x.secTrend;
+  document.getElementById('trendHint').textContent=x.trendHint;
+  document.getElementById('legend').innerHTML=x.legend;
+  document.getElementById('exportDay').textContent=x.exportDay;
+  document.getElementById('exportMonth').textContent=x.exportMonth;
+  document.getElementById('exportNote').textContent=x.exportNote;
+  document.getElementById('footH').textContent=x.footH;
+  document.getElementById('footBody').innerHTML=x.footBody;
+  // domain bar
+  const db=document.getElementById('domainBar');db.innerHTML='';
+  DOMAINS.forEach(d=>{const b=document.createElement('button');b.className=(d.key===domain?'on':'');
+    b.innerHTML='<span class="c">'+d.c+'</span>'+(lang==='en'?d.en:d.th);
+    b.onclick=()=>{domain=d.key;render();};db.appendChild(b);});
+}
+
+/* ---- render ---- */
+function render(){
+  setStatic();
+  const x=T(),dgi=dayGZ(curDate),term=findTerm(curDate),c0=cast(curDate,0);
+  document.getElementById('termName').textContent=term[0]+' · '+(lang==='en'?term[1]:term[2]);
+  document.getElementById('dayLine').textContent=x.dayLine(gzName(dgi),x.dun[term[4]?1:0],c0.ju,x.yuan[futouYuan(curDate)]);
+  const charts=[],scores=[];
+  for(let b=0;b<12;b++){const c=cast(curDate,b);charts.push(c);scores.push(domainScore(c,domain));}
+  renderHours(charts,scores);renderWindows(charts,scores);
+  renderBoard(charts[curHour]);renderReading(charts[curHour],scores[curHour]);
+  renderTrend();
+  updateNow();
+  document.getElementById('datePick').value=ymd(curDate);
+}
+
+function renderBoard(ch){
+  const yp=youPalace(ch),dp=domainDir(ch,domain);
+  document.getElementById('hourTitle').textContent=BRANCHES[ch.hgi%12]+'時 '+HOUR_RANGE[curHour];
+  const b=document.getElementById('board');b.innerHTML='';
+  LAYOUT.forEach(pal=>{
+    const gate=ch.gates[pal],star=ch.stars[pal],god=ch.gods[pal],gsc=GATE_SCORE[gate]||0;
+    let cls='cell';
+    if(pal===5)cls+=' center';
+    else if(gate==='開門'||gate==='生門'||gate==='休門')cls+=' aus';
+    else if(gate==='景門')cls+=' aus2';
+    else if(gsc<=-2)cls+=' bad';
+    if(pal===dp&&pal!==5)cls+=' dir';
+    const d=document.createElement('div');d.className=cls;
+    d.innerHTML='<span class="tri">'+pal+' '+TRIGRAM[pal]+'</span>'+
+      '<span class="pnum">'+(pal===ch.Ph?'·值':'')+'</span>'+
+      '<div class="god">'+(pal===5?'　':(god||'　'))+'</div>'+
+      '<div class="star">'+(star||'')+'</div>'+
+      '<div class="gate">'+(pal===5?'<span style="color:var(--bone-faint);font-size:13px">中宮·寄坤</span>':(gate||''))+'</div>'+
+      '<div class="stems"><span class="hv">'+(ch.heaven[pal]||'')+'</span><span class="sep">／</span><span class="er">'+(ch.earth[pal]||'')+'</span></div>'+
+      (pal===ch.Ph?'<span class="chief">值符宮</span>':'')+
+      (pal===yp?'<span class="you">朱·我</span>':'');
+    b.appendChild(d);
+  });
+}
+
+function renderReading(ch,score){
+  const x=T();
+  document.getElementById('readHour').textContent=BRANCHES[ch.hgi%12]+'時 · '+gzName(ch.hgi);
+  const vid=verdictId(score),v=x.verdict[vid];
+  const yp=youPalace(ch),youGate=yp?ch.gates[yp]:null,youGod=yp?ch.gods[yp]:null;
+  const headGate=(youGate&&GATE_TXT[youGate])?youGate:'生門';
+  const dp=domainDir(ch,domain),dir=PALACE_DIR[dp]?(lang==='en'?PALACE_DIR[dp][0]:PALACE_DIR[dp][1]):'';
+  const el=ELEM[PALACE_ELEM[dp]||'earth'];
+
+  // your-position prose
+  let pos;
+  if(lang==='en'){
+    pos=`Your natal stem <span class="cjk">${BASE.stemChar}</span> falls in `+(yp?`palace <span class="cjk">${yp} ${TRIGRAM[yp]}</span>, carrying <span class="cjk">${youGate}</span>${youGod?` and <span class="cjk">${youGod}</span>`:''}. `:'the hidden seat this hour. ');
+    pos+=(yp&&(GATE_SCORE[youGate]>=2))?'You stand on supportive ground — your own moves are well-timed.':
+         (yp&&(GATE_SCORE[youGate]<=-2))?'You stand on difficult ground — let others move first and protect your base.':
+         'A neutral seat — neither pushed nor blocked.';
+  } else {
+    pos=`ธาตุประจำตนของท่าน <span class="cjk">${BASE.stemChar}</span> สถิต`+(yp?`ที่วัง <span class="cjk">${yp} ${TRIGRAM[yp]}</span> ทรง <span class="cjk">${youGate}</span>${youGod?` ร่วม <span class="cjk">${youGod}</span>`:''} `:`ณ ที่เร้นในยามนี้ `);
+    pos+=(yp&&(GATE_SCORE[youGate]>=2))?'ท่านยืนบนชัยภูมิอันเกื้อหนุน การเคลื่อนไหวของท่านต้องฤกษ์':
+         (yp&&(GATE_SCORE[youGate]<=-2))?'ท่านยืนบนชัยภูมิคับขัน พึงให้ผู้อื่นเคลื่อนก่อนและรักษาฐานของตน':
+         'เป็นที่ตั้งอันเป็นกลาง มิได้ถูกดันและมิได้ถูกขวาง';
+  }
+
+  // domain prose
+  const dlife=pgate(ch,'生門'),dopen=pgate(ch,'開門');
+  let dom;
+  if(lang==='en'){
+    const adv=score>=4?'Conditions favour deliberate, planned action — the kind you would still stand behind if the result were merely average.':
+              score>=1?'A routine window. Hold positions and prepare rather than initiate.':
+              'A window to wait, verify and protect. Strong urges to act are worth distrusting here.';
+    if(domain==='conflict') dom=`Strife indicators are ${score>=4?'low — accord is reachable':score>=1?'moderate — keep tone cool':'high — friction, rumour and disputes loom; avoid confrontation'}. ${adv}`;
+    else dom=`The Life Gate (income) rests in palace <span class="cjk">${dlife}</span>; the Open Gate (opportunity) in palace <span class="cjk">${dopen}</span>. ${adv}`;
+  } else {
+    const adv=score>=4?'ฤกษ์เอื้อแก่การลงมือที่ไตร่ตรองและวางแผนไว้ — ชนิดที่ท่านยังภูมิใจแม้ผลออกมาเพียงปานกลาง':
+              score>=1?'เป็นยามกิจวัตร พึงรักษาที่มั่นและเตรียมการ มิใช่ริเริ่ม':
+              'เป็นยามแห่งการรอคอย พิสูจน์ และรักษา หากใจเร่งเร้าให้ลงมือ พึงระแวงไว้';
+    if(domain==='conflict') dom=`เค้าวิวาท${score>=4?'เบาบาง — ความปรองดองเอื้อมถึง':score>=1?'ปานกลาง — พึงรักษาวาจาให้เย็น':'แรงกล้า — มีแรงเสียดทาน ข่าวลือ และคดีความ พึงเลี่ยงการเผชิญหน้า'} ${adv}`;
+    else dom=`ประตูชีวิต (รายได้) สถิตวัง <span class="cjk">${dlife}</span> ประตูเปิด (โอกาส) สถิตวัง <span class="cjk">${dopen}</span> ${adv}`;
+  }
+
+  const f=formation(ch);
+  const formHtml=f?`<div class="formation"><span class="fn">${f[0]}</span><p>${lang==='en'?f[1]:f[2]}</p></div>`:'';
+
+  document.getElementById('reading').innerHTML=
+    `<div class="verdict"><div class="score">${score}<small>/pts</small></div><div class="vtxt"><h3>${v[0]}</h3><p>${v[1]}</p></div></div>`+
+    `<div class="rblock"><h4>${x.h_position}</h4><p>${pos}</p></div>`+
+    `<div class="rblock"><h4>${x.h_gate}</h4><p>${GATE_TXT[headGate][lang]}</p></div>`+
+    `<div class="rblock"><h4>${x.h_domain(domain)}</h4><p>${dom}</p></div>`+
+    `<div class="rblock"><h4>${x.h_signs}</h4><div class="signs">`+
+      `<div class="s">${x.signDir}<b>${dir} · ${dp} ${TRIGRAM[dp]||''}</b></div>`+
+      `<div class="s">${x.signEl}<b>${lang==='en'?el.en:el.th}</b></div>`+
+      `<div class="s">${x.signColor}<b>${lang==='en'?el.color.en:el.color.th}</b></div>`+
+      `<div class="s">${x.signNum}<b>${dp} · ${el.num}</b></div>`+
+    `</div></div>`+formHtml;
+}
+
+function renderHours(charts,scores){
+  const x=T(),g=document.getElementById('hourGrid');g.innerHTML='';
+  for(let b=0;b<12;b++){const lv=level(scores[b]);
+    const div=document.createElement('div');div.className='hour lvl'+lv+(b===curHour?' sel':'');
+    div.innerHTML='<div class="br">'+BRANCHES[b]+'</div><div class="tm">'+HOUR_RANGE[b]+'</div><div class="bar"><i></i></div><div class="tag">'+x.tags[lv]+'</div>';
+    div.onclick=()=>{curHour=b;render();};g.appendChild(div);}
+}
+
+function renderWindows(charts,scores){
+  const x=T();let best=-99,bi=0,worst=99,wi=0;
+  for(let b=0;b<12;b++){if(scores[b]>best){best=scores[b];bi=b;}if(scores[b]<worst){worst=scores[b];wi=b;}}
+  const fmt=b=>{const[h1,h2]=HOUR_CLOCK[b],p=n=>String(n).padStart(2,'0')+':00';return p(h1)+'–'+p(h2);};
+  const bestDesc=lang==='en'?`${BRANCHES[bi]}時 · score ${scores[bi]}. The clearest-headed window to act.`:`${BRANCHES[bi]}時 · คะแนน ${scores[bi]} ยามที่ใจแจ่มที่สุดในการลงมือ`;
+  const guardDesc=lang==='en'?`${BRANCHES[wi]}時 · score ${scores[wi]}. Slow down, verify, avoid new commitments.`:`${BRANCHES[wi]}時 · คะแนน ${scores[wi]} พึงชะลอ ตรวจตรา และเลี่ยงการผูกมัดใหม่`;
+  document.getElementById('windows').innerHTML=
+    `<div class="win good"><div class="wt">${x.winBest}</div><div class="wh">${fmt(bi)}</div><div class="wd">${bestDesc}</div></div>`+
+    `<div class="win bad"><div class="wt">${x.winGuard}</div><div class="wh">${fmt(wi)}</div><div class="wd">${guardDesc}</div></div>`;
+}
+
+function nowBucket(score){const v=verdictId(score);if(v==='prosper'||v==='favour')return 'good';if(v==='work')return 'neutral';return 'bad';}
+function updateNow(){
+  const x=T(),real=new Date(),hr=real.getHours(),bIdx=Math.floor(((hr+1)%24)/2);
+  const ch=cast(real,bIdx),score=domainScore(ch,domain),bucket=nowBucket(score),m=x.now.msg[bucket];
+  const dd=DOMAINS.find(d=>d.key===domain),dnm=lang==='en'?dd.en:dd.th;
+  const sigil=bucket==='good'?'進':bucket==='neutral'?'待':'止';
+  const clock=String(hr).padStart(2,'0')+':'+String(real.getMinutes()).padStart(2,'0');
+  const box=document.getElementById('nowBox');box.className='nowbox '+bucket;
+  box.innerHTML=
+    '<div class="nb-head"><span class="nb-label">'+x.now.label+'</span>'+
+    '<span class="nb-meta">'+x.now.asof+' '+clock+' · '+BRANCHES[bIdx]+'時 · '+x.now.dom+': '+dnm+' · '+score+' pts</span>'+
+    '<button class="nb-ref" onclick="updateNow()">'+x.now.refresh+'</button></div>'+
+    '<div class="nb-body"><div class="nb-sigil">'+sigil+'</div>'+
+    '<div class="nb-txt"><h3>'+m[0]+'</h3><p>'+m[1]+'</p><p class="nb-disc">'+x.now.disc+'</p></div></div>';
+}
+
+function renderTrend(){
+  const y=curDate.getFullYear(),m=curDate.getMonth(),days=new Date(y,m+1,0).getDate();
+  const bars=document.getElementById('trendBars');bars.innerHTML='';
+  for(let d=1;d<=days;d++){const dt=new Date(y,m,d);
+    let best=-99;for(let b=0;b<12;b++){const s=domainScore(cast(dt,b),domain);if(s>best)best=s;}
+    const lv=level(best),h=Math.max(6,Math.min(72,32+best*4));
+    const el=document.createElement('div');el.className='tb lvl'+lv+(d===curDate.getDate()?' today':'');
+    el.style.height=h+'px';el.title='Day '+d+' · best '+best;
+    el.onclick=()=>{curDate=new Date(y,m,d);render();};bars.appendChild(el);}
+  const ax=document.getElementById('trendAxis');
+  const mon=curDate.toLocaleDateString(lang==='th'?'th-TH':'en-US',{month:'long',year:'numeric'});
+  ax.innerHTML='<span>1</span><span>'+mon+'</span><span>'+days+'</span>';
+}
+
+/* ---- export ---- */
+function dayRows(date){
+  const rows=[],term=findTerm(date);
+  for(let b=0;b<12;b++){const c=cast(date,b),s=domainScore(c,domain),vid=verdictId(s);
+    const[h1,h2]=HOUR_CLOCK[b],p=n=>String(n).padStart(2,'0')+':00';
+    const yp=youPalace(c),youGate=yp?c.gates[yp]:'(hidden)',dp=domainDir(c,domain);
+    rows.push([ymd(date),domain,(lang==='en'?term[1]:term[2]),BRANCHES[b]+'時',p(h1)+'-'+p(h2),
+      L.en.verdict[vid][0],s,'chief '+c.chiefStar+'/'+c.chiefGate,'self '+youGate,'dir '+(PALACE_DIR[dp]?PALACE_DIR[dp][0]:'')]);}
+  return rows;
+}
+function downloadCSV(name,rows){
+  const head=['date','domain','solar_term','hour','clock','fortune','score','chart_chief','self_position','direction'];
+  const csv=[head].concat(rows).map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const note='# Qi Men Dun Jia timing guidance — divination/study only. No hour is loss-free; not financial advice.\n';
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([note+csv],{type:'text/csv'}));a.download=name;a.click();
+}
+
+/* ---- events ---- */
+function step(n){curDate.setDate(curDate.getDate()+n);render();}
+function setLang(l){lang=l;render();}
+document.getElementById('prevDay').onclick=()=>step(-1);
+document.getElementById('nextDay').onclick=()=>step(1);
+document.getElementById('todayBtn').onclick=()=>{const t=new Date();t.setFullYear(2026);curDate=new Date(t.getFullYear(),t.getMonth(),t.getDate());render();};
+document.getElementById('datePick').onchange=e=>{if(e.target.value){curDate=new Date(e.target.value+'T00:00:00');render();}};
+document.getElementById('exportDay').onclick=()=>downloadCSV('qimen_'+domain+'_'+ymd(curDate)+'.csv',dayRows(curDate));
+document.getElementById('exportMonth').onclick=()=>{const y=curDate.getFullYear(),m=curDate.getMonth(),rows=[];
+  for(let d=1;d<=new Date(y,m+1,0).getDate();d++) rows.push(...dayRows(new Date(y,m,d)));
+  downloadCSV('qimen_'+domain+'_'+y+'-'+String(m+1).padStart(2,'0')+'.csv',rows);};
+
+initBase();render();
+setInterval(updateNow,60000);
+</script>
+
+
+</body></html>
